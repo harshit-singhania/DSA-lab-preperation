@@ -11,11 +11,11 @@ struct node {
 typedef struct node node ;
 node *front = NULL, *rear = NULL; 
 
-void is_empty() {
+bool is_empty() {
     if (front == NULL) {
-        printf("Queue is empty");
+        return true;
     } else {
-        printf("Queue is not empty");
+        return false;
     }
 }
 
