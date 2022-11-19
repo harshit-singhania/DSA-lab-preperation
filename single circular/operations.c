@@ -88,7 +88,7 @@ int search(int key) {
     }
 }
 
-void swap_positions(int v1, int v2) {
+void swap_nodes(int v1, int v2) {
     if (v1 == v2) {
         return; 
     }

@@ -77,7 +77,7 @@ void reverse() {
     }
 }
 
-void swap_positions(int v1, int v2) {
+void swap_nodes(int v1, int v2) {
     node *prev1 = NULL, *prev2 = NULL, *temp1 = head, *temp2 = head;
     while (temp1->data != v1) {
         prev1 = temp1;
