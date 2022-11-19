@@ -41,6 +41,7 @@ void insert(int data, int pos) {
         int count = 1;
         while (count < pos) {
             temp = temp->next;
+            count++;
         }
         new_node->next = temp->next;
         temp->next->prev = new_node;
