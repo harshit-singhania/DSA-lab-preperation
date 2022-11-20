@@ -1,7 +1,10 @@
 // binary tree in c 
 
+
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct node {
     int data;
@@ -68,6 +71,25 @@ void postorder(node *temp) {
         postorder(temp->left);
         postorder(temp->right);
         printf("%d ", temp->data);
+    }
+}
+
+void levelorder(node* temp) {
+    if (temp == NULL) {
+        return;
+    }
+    node *queue[100];
+    int front = 0, back = 0;
+    queue[back++] = temp;
+    while (front != back) {
+        node *current = queue[front++];
+        printf("%d ", current->data);
+        if (current->left != NULL) {
+            queue[back++] = current->left;
+        }
+        if (current->right != NULL) {
+            queue[back++] = current->right;
+        }
     }
 }
 
@@ -179,5 +201,8 @@ int main() {
     printf("Postorder traversal: ");
     postorder(root);
     printf("");
+    printf("Levelorder traversal: ");
+    levelorder(root);
     return 0;
+
 }
