@@ -1,5 +1,7 @@
 // binary search in array 
 
+#include <stdio.h>
+
 int iterative(int arr[], int start, int end, int item) {
     while (start <= end) {
         int mid = (start + end) / 2;
